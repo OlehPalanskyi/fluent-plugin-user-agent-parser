@@ -3,7 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = "fluent-plugin-ua-parser"
+  spec.name          = "fluent-plugin-user-agent-parser"
   spec.version       = "1.2.0"
   spec.authors       = ["ImCotop"]
   spec.email         = ["ImCotop@icloud.com"]
