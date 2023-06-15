@@ -46,7 +46,7 @@ module Fluent::Plugin
 
     def get_ua_detail(ua_string)
       ua = @parser.parse(ua_string)
-      data = {"browser"=>{}, "os"=>{}, "device"=>""}
+      data = {"browser"=>{}, "os"=>{}, "device"=>{}}
       return data if ua.nil?
       data['browser']['family'] = ua.family
       data['browser']['version'] = ua.version.to_s
@@ -54,7 +54,7 @@ module Fluent::Plugin
       data['os']['family'] = ua.os.family
       data['os']['version'] = ua.os.version.to_s
       data['os']['major_version'] = ua.os.version.major.to_i unless ua.os.version.nil?
-      data['device'] = ua.device.to_s
+      data['device']['name'] = ua.device.to_s
       data
     end
 
